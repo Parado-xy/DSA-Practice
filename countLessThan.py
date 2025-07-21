@@ -4,10 +4,11 @@
 # Your task is to write a Python function that counts the number of integers in the matrix that are smaller than the given target. The function should return this count as an integer.
 # The expected complexity is O(n + m), where n is the number of rows and  is the number of columns in the matrix.
 
+from typing import List
 # My first Try:
 # This try only makes use of row-wise sorted order. 
 # By trys to search only if necessary. 
-def count_less_than(matrix, target):
+def count_less_than(matrix: List[List], target):
     # TODO: Your code goes here. Remember that the matrix is sorted row-wise and column-wise!
     count = 0
     for i in range(len(matrix)):

@@ -75,6 +75,9 @@
 #    - Can be done in-place for square matrices
 #    - Time complexity is O(n²) where n is the matrix dimension
 
+# In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal; 
+# that is, it switches the row and column indices of the matrix A by producing another matrix, often denoted by A^T
+
 # Here's an in-place matrix rotation algorithm that's more space-efficient:
 
 # ```python
@@ -195,6 +198,18 @@ def anti_rotate_array_gpt(nums: List[int], k: int) -> None:
     # Perform left rotation by k for positive k and right rotation by k for negative k
     # The list slices are swapped to move elements accordingly
     nums[k:], nums[:k] = nums[:k], nums[k:]
+
+class Solution:
+    # Rotate to the right. 
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        k = k % len(nums)
+        # Take the last `k` elements to the front, and the first len(nums) - k elements 
+        # To the back. 
+        nums[:] = nums[-k:] + nums[:-k]
+        
 
 # Testing the function with various cases
 print(anti_rotate_array_gpt([1, 2, 3, 4, 5], -2))  # Expected rightward rotation result: [4, 5, 1, 2, 3]
