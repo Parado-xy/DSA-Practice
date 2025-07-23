@@ -81,7 +81,7 @@ def generate_random_linked_list(size, lower_bound=1, upper_bound=10):
     return linked_list
 
 # Generate a random linked list with 10 nodes, values between 1 and 10
-random_linked_list = generate_random_linked_list(5)
+random_linked_list = generate_random_linked_list(7)
 
 random_linked_list.print_list() # Print the linkedlist
 
