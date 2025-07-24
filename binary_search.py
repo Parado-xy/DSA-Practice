@@ -51,5 +51,6 @@ class Solution:
 
 
 # Here's a stellar blog post. 
+# TODO READ THIS ARTICLE
 # https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-search-(comprehensive-resource-with-a-bulletproof-template)/1532153#template       
         
