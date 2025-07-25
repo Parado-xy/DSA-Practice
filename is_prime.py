@@ -46,15 +46,12 @@ def is_perfect_square(num):
 
 import math
 
-def is_prime(n):
+def is_prime_gpt(n):
     """
     Determines if a given number is prime.
-
     A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
-
     Args:
         n: The number to check for primality.
-
     Returns:
         True if n is prime, False otherwise.
     """
@@ -71,10 +68,6 @@ def is_prime(n):
 
     # If no divisors are found, n is prime
     return True
-
-
-
-
 
 
 

@@ -34,5 +34,8 @@ def mySqrt(x: int) -> int:
     # When the loop exits, `right` will point to the largest integer whose square is <= x.
     # So, we return `right` as it represents the integer square root of x.
     return right  
+    
 
 
+
+print(mySqrt(49))

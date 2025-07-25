@@ -68,6 +68,9 @@ def move_right(nums: List[int], current_index: int )-> int:
 
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
+        """
+        This method finds the target via binary search, then expands linearly. 
+        """
 
         # If the target is not in nums, return early
         if (target not in nums):
