@@ -35,6 +35,11 @@ import pprint
 
 Matrix = List[List]
 
+# NOTE:
+#  90 = transpose + reverse row
+# 180 = reverse row + reverse column
+# 270 = transpose + reverse col
+
 def rotate_matrix(matrix: Matrix ) -> Matrix:
     """
     Rotate a matrix 90 degrees, in-place;
