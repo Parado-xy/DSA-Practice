@@ -62,7 +62,7 @@ class Solution:
             # If the current value is cheaper than the cheapest thing we've seen, we save this value. 
             if (value < cheapest):
                 cheapest = value
-            # Else if the current max_profit is greater than the previous max_profit, 
+            # Else if the current current_profit is greater than the previous max_profit, 
             elif(max_profit < value - cheapest):
                 max_profit = value - cheapest
 
