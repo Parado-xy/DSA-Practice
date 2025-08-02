@@ -40,12 +40,8 @@ class Solution:
         for row in image:
             # Reverse each row of the image (a.k.a flip horizontal) 
             row[:] = row[::-1]
-
-        for row in image:
             # Invert each row. 
             row[:] = [0 if x == 1 else 1 for x in row]
-
-       
 
         return image
 
