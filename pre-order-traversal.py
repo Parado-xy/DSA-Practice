@@ -58,5 +58,7 @@ root_val = 20
 # Build the BST from the adjacency list
 root = build_tree(adj_list, root_val)
 
+# NOTE: In pre-order traversal, root nodes are reached/printed before children nodes
+
 # Perform pre-order traversal and print the node values
 pre_order_traversal(root) # 20 10 5 3 7 15 12 30 25 23 28 35 40

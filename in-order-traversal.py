@@ -37,23 +37,32 @@ def in_order_traversal(root):
 # Example usage:
 
 # Define the adjacency list representation of the corrected BST
-adj_list = {
-    3: [1, 5],
-    1: [0, 2],
-    5: [],
-    0: [],
-    2: [None, 2.5],
-    2.5: []
+adj_list = { 
+    20: [10, 30], 
+    10: [5, 15], 
+    30: [25, 35], 
+    5: [3, 7], 
+    15: [12], 
+    25: [23, 28], 
+    35: [None, 40], 
+    3: [], 
+    7: [], 
+    12: [],
+    23: [], 
+    28: [], 
+    40: []
 }
 
 # Define the root value of the BST
-root_val = 3
+root_val = 20
 
 # Build the BST from the adjacency list
 root = build_tree(adj_list, root_val)
 
+# NOTE: In inorder traversal, nodes are printed from least-greatest
+
 # Perform in-order traversal and print the node values
-in_order_traversal(root) # Output: 0 1 2 3 5
+in_order_traversal(root) # Output: 3 5 7 10 12 15 20 23 25 28 30 35 40 
 
 # Print a blank line.
 print()

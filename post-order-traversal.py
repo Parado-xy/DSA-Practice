@@ -57,6 +57,7 @@ root = build_tree(adj_list, root_val)
 # Perform post-order traversal and print the node values
 post_order_traversal(root)
 
+# NOTE: In post order traversal, any root node is printed after all their children nodes. 
 
 # Here's one that uses an array:
 def postorder_traversal(root):
