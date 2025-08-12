@@ -43,9 +43,8 @@ class Solution:
         if n == 1: 
             return "1"
         else: 
-            # Return the run-length-encoded string.
-            value = self.run_length_encode(self.countAndSay(n - 1)) 
-            return value
+            # Return the run-length-encoded string. 
+            return self.run_length_encode(self.countAndSay(n - 1))
 
     def run_length_encode(self, s: str) -> str:
         if not s:
