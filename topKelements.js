@@ -7,9 +7,6 @@ class Solution {
   topKFrequent(nums, k) {
     // Let's start with a solution that works.
 
-    // First, let's sort the values in the array so that we have the advantage of order.
-    nums.sort((a, b) => a - b);
-
     // Create a Pointer that Points to the current value;
     let current = nums[0];
 
