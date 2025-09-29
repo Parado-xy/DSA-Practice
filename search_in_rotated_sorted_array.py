@@ -70,3 +70,45 @@ class Solution:
                 L = mid + 1
 
         return -1  # Target not found
+    
+    def more_optimized_search(self, nums: list[int], target: int)-> int:
+        # Get a pointer to the left and right. 
+        L, R = 0, len(nums) - 1
+
+        while L <= R:
+            # Get a middle pointer. 
+            mid = (L + R) // 2
+
+            if target == nums[mid]:
+                return mid
+            
+            # Left sorted portion. 
+            if nums[L] <= nums[mid]:
+                # If the target is greater than the current mid, or if the target is less than 
+                # the least left value. 
+                if target > nums[mid] or target < nums[L]:
+                    # It means the target is not in the left ordered section. 
+                    # So we cut it off. 
+                    L = mid + 1
+                else:
+                    # Else if the target is not greater than the mid 
+                    # and the target is not less than the least left value.
+                    # We cut off the right ordered space. 
+                    R = mid - 1
+            else:
+                # If we're in the right sorted portion of the array. 
+                if target < nums[mid] or target > nums[R]:
+                    # And if the target is less than the mid or the target is 
+                    # greater than the greatest R,
+                    # Then the solution is in the Left portion of the array 
+                    # So we cut out the right. 
+                    R = mid - 1
+                else:
+                    # If the target is in the right portion, we cut out the left portion. 
+                    L = mid + 1
+
+        # Return -1 if we find nothing.
+        return -1
+    
+sol = Solution()
+print(sol.more_optimized_search([4,5,6,7,0,1,2],  1))

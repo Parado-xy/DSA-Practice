@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def productExceptSelf_brute(self, nums: List[int]) -> List[int]:
         # Create a result array. 
